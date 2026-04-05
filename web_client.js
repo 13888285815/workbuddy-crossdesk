@@ -20,11 +20,12 @@ const elements = {
 };
 
 // Config section (can be overridden by setting window.CROSSDESK_CONFIG before this script runs)
+// 注意：请修改下面的服务器地址为您的 CrossDesk Server 地址
 const DEFAULT_CONFIG = {
-  signalingUrl: "wss://api.crossdesk.cn:9099",
+  signalingUrl: "wss://YOUR_SERVER:9099",
   iceServers: [
-    { urls: ["stun:api.crossdesk.cn:3478"] },
-    { urls: ["turn:api.crossdesk.cn:3478"], username: "crossdesk", credential: "crossdeskpw" },
+    { urls: ["stun:YOUR_SERVER:3478"] },
+    { urls: ["turn:YOUR_SERVER:3478"], username: "crossdesk", credential: "crossdeskpw" },
   ],
   heartbeatIntervalMs: 3000,
   heartbeatTimeoutMs: 10000,
